@@ -14,7 +14,7 @@ function App() {
 
 	useEffect(() => {
 		fetchGlobal(
-			"https://apifantasticfy.onrender.com/users/users/",
+			"https://apifantasticfy.onrender.com/users/",
 			"GET",
 			setUsers
 		);
