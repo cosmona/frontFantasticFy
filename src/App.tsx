@@ -13,7 +13,11 @@ function App() {
 	const [users, setUsers] = useState<UserData[]>([]);
 
 	useEffect(() => {
-		fetchGlobal("http://localhost:3000/users/", "GET", setUsers);
+		fetchGlobal(
+			"https://apifantasticfy.onrender.com/users/users/",
+			"GET",
+			setUsers
+		);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [users && users.length]);
 
@@ -37,7 +41,6 @@ function App() {
 						<ShowUsers users={users} setUsers={setUsers} />
 					</article>
 				</main>
-
 				<footer className="Footer_App">
 					<p>&copy; Iñaki Perez 2024.</p>
 				</footer>

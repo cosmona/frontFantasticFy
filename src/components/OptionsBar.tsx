@@ -13,8 +13,12 @@ const OptionsBar: React.FC<ModalNewProps> = (promps) => {
 	const { setOpenModalNew, setUsers } = promps;
 
 	const fetchSync = async () => {
-		await fetchGlobal("http://localhost:3000/sync/", "POST");
-		fetchGlobal("http://localhost:3000/users/", "GET", setUsers);
+		await fetchGlobal("https://apifantasticfy.onrender.com/sync/", "POST");
+		fetchGlobal(
+			"https://apifantasticfy.onrender.com/users/",
+			"GET",
+			setUsers
+		);
 	};
 
 	const fetchNew = async () => {

@@ -1,9 +1,14 @@
 import { ChangeEvent, useState } from "react";
+
+// Componentes, funciones e interfaces
 import { ModalNewProps, UserData } from "../Helpers/interfaces";
 import { fetchGlobal } from "../Helpers/helpers";
+
+//Material-ui
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import CancelIcon from "@mui/icons-material/Cancel";
 
+// Estilos
 import "./ModalNew.css";
 
 const ModalNew: React.FC<ModalNewProps> = (prompt) => {
@@ -26,7 +31,12 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		fetchGlobal("http://localhost:3000/users/", "PUT", setUsers, formData);
+		fetchGlobal(
+			"https://apifantasticfy.onrender.com/users/",
+			"PUT",
+			setUsers,
+			formData
+		);
 		setOpenModalNew(false);
 	};
 
