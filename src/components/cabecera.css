@@ -1,0 +1,14 @@
+.Container_Cabecera {
+	background-color: white;
+	box-shadow: 3px 6px 11px #05a0db;
+	position: fixed;
+	top: 0px;
+	height: 90px;
+	width: 100vw;
+	z-index: 3;
+}
+
+.Logo_Cabecera {
+	margin-top: 10px;
+	width: 120px;
+}

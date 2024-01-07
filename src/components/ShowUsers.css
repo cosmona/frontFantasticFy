@@ -1,0 +1,53 @@
+.Cards_ShowUsers {
+	display: flex;
+	flex-direction: column;
+	max-width: 80vw;
+	min-width: 350px;
+	margin: 0 auto;
+}
+
+.UserCard_ShowUsers {
+	background-color: rgb(14 41 74);
+	margin: 8px;
+	display: flex;
+	border-radius: 20px;
+	box-shadow: 3px 6px 11px #05a0db;
+	align-items: baseline;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.Title_ShowUsers {
+	margin-top: 5px;
+	font-size: 22px;
+	color: #05a0db;
+	text-align: left;
+}
+
+.Title_ShowUsers + div {
+	font-size: 18px;
+	margin-top: 10px;
+	margin-left: 20px;
+	color: white;
+	text-align: left;
+}
+
+@media only screen and (min-width: 700px) {
+	.UserCard_ShowUsers {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.Title_ShowUsers {
+		margin-top: 5px;
+		font-size: 12px;
+		color: #05a0db;
+		/* color: #db0594; */
+	}
+
+	.Title_ShowUsers + div {
+		font-size: 10px;
+		margin-left: 0px;
+	}
+}

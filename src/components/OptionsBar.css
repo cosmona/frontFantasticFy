@@ -1,0 +1,18 @@
+.Container_OptionsBar {
+	display: flex;
+	justify-content: center;
+}
+
+.Button_OptionsBar {
+	font-size: 16px;
+	display: inline;
+	margin: 0px 10px;
+}
+
+@media only screen and (min-width: 700px) {
+	.Container_OptionsBar {
+		display: flex;
+		justify-content: flex-end;
+		width: 85vw;
+	}
+}

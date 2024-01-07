@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+/* Reset CSS de Eric Meyer con ajustes adicionales */
+
+/* Box-sizing reset para mejorar la consistencia en el manejo del modelo de caja */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Reset general de márgenes y rellenos */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+button,
+input {
+	margin: 0;
+	padding: 0;
+}
+
+/* Evitar el estilo de lista predeterminado en algunos navegadores */
+ul,
+ol {
+	list-style: none;
+}
+
+/* Ajuste de estilo del hipervínculo predeterminado y deshabilita el resaltado al hacer clic */
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Restablecer la apariencia y el espaciado de texto en los botones */
+button {
+	background-color: transparent;
+	border: 0;
+	padding: 0;
+}
+
+/* Cambios generales para mejorar la legibilidad y accesibilidad */
+body {
+	line-height: 1.5;
+}
+
+/* Elementos de bloque deberían tener su propio espacio vertical */
+h1,
+h2,
+h3,
+p {
+	margin-bottom: 1em;
+}
+
+/* Agregar estilos adicionales según sea necesario... */
