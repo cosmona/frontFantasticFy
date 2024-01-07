@@ -20,7 +20,6 @@ export const fetchGlobal = async (
 		}
 
 		const data = await res.json();
-		console.log("data", data);
 		if (setUsers) setUsers(data.usuarios);
 	} catch (error: any) {
 		console.error(error.message);
