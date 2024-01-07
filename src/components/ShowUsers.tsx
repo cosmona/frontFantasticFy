@@ -14,7 +14,11 @@ const ShowUsers: React.FC<ShowUsersProps> = (prompt) => {
 	const { users, setUsers } = prompt;
 
 	useEffect(() => {
-		fetchGlobal("http://localhost:3000/users/", "GET", setUsers);
+		fetchGlobal(
+			"https://apifantasticfy.netlify.app:3000/users/",
+			"GET",
+			setUsers
+		);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
