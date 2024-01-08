@@ -10,6 +10,7 @@ export const fetchGlobal = async (
 		const res = await fetch(url, {
 			method: method,
 			headers: {
+				"Access-Control": "Allow-Origin",
 				"Content-Type": "application/json",
 			},
 			body: formData ? JSON.stringify(formData) : undefined,
