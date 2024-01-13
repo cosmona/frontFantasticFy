@@ -1,12 +1,8 @@
 import { useEffect } from "react";
 
 // Componentes, funciones e interfaces
-import { ModalMsgProps } from "../Helpers/interfaces";
-import { fetchGlobal } from "../Helpers/helpers";
 
-//Material-ui
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-import CancelIcon from "@mui/icons-material/Cancel";
+import { ModalMsgProps } from "../Helpers/interfaces";
 
 // Estilos
 import "./ModalMsg.css";
