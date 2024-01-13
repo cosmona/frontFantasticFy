@@ -1,6 +1,6 @@
 // Componentes, funciones e interfaces
 import { fetchGlobal } from "../Helpers/helpers";
-import { ModalNewProps } from "../Helpers/interfaces";
+import { OptionsBarProps } from "../Helpers/interfaces";
 
 //material-ui
 import SyncIcon from "@mui/icons-material/Sync";
@@ -8,17 +8,37 @@ import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 
 //Estilos
 import "./OptionsBar.css";
+import { useState } from "react";
+import { on } from "events";
 
-const OptionsBar: React.FC<ModalNewProps> = (promps) => {
-	const { setOpenModalNew, setUsers } = promps;
+const OptionsBar: React.FC<OptionsBarProps> = (promps) => {
+	const { setTextModalMsg, setOpenModalNew, setOpenModalMsg, setUsers } =
+		promps;
+	const [onClick, setOnclick] = useState(false);
 
 	const fetchSync = async () => {
-		await fetchGlobal("https://apifantasticfy.onrender.com/sync/", "POST");
+		const res = await fetchGlobal(
+			"https://apifantasticfy.onrender.com/sync/",
+			"POST"
+		);
+
 		fetchGlobal(
 			"https://apifantasticfy.onrender.com/users/",
 			"GET",
 			setUsers
 		);
+
+		setOnclick(true);
+		setTimeout(() => {
+			setOnclick(false);
+		}, 5000);
+
+		if (res && !res.ok) {
+			setTextModalMsg("Error");
+		} else {
+			setTextModalMsg("Registros actualizados");
+		}
+		setOpenModalMsg(true);
 	};
 
 	const fetchNew = async () => {
@@ -27,7 +47,12 @@ const OptionsBar: React.FC<ModalNewProps> = (promps) => {
 
 	return (
 		<div className="Container_OptionsBar">
-			<div className="Button_OptionsBar" onClick={() => fetchSync()}>
+			<div
+				className={
+					onClick ? "Button_OptionsBar_onClick" : "Button_OptionsBar"
+				}
+				onClick={() => fetchSync()}
+			>
 				<SyncIcon />
 			</div>
 			<div className="Button_OptionsBar" onClick={() => fetchNew()}>

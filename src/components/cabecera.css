@@ -1,8 +1,8 @@
 .Container_Cabecera {
-	background-color: white;
-	box-shadow: 3px 6px 11px #05a0db;
 	position: fixed;
 	top: 0px;
+	background-color: white;
+	box-shadow: 3px 6px 11px #05a0db;
 	height: 90px;
 	width: 100vw;
 	z-index: 3;

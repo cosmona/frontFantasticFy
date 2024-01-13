@@ -1,0 +1,9 @@
+.Container_ModalMsg {
+	margin: 0 auto;
+	background: #3bcfc1a1;
+	padding: 5px;
+	top: 100px;
+	position: fixed;
+	width: 100%;
+	text-align: center;
+}

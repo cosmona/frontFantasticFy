@@ -12,7 +12,8 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import "./ModalNew.css";
 
 const ModalNew: React.FC<ModalNewProps> = (prompt) => {
-	const { setUsers, setOpenModalNew } = prompt;
+	const { setUsers, setOpenModalNew, setTextModalMsg, setOpenModalMsg } =
+		prompt;
 
 	const [formData, setFormData] = useState<UserData>({
 		name: "",
@@ -38,6 +39,8 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 			formData
 		);
 		setOpenModalNew(false);
+		setTextModalMsg("Registro añadido");
+		setOpenModalMsg(true);
 	};
 
 	const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -51,7 +54,7 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 	return (
 		<div className="Container_ModalNew">
 			<div className="Form_ModalNew">
-				<h1>Nuevo Usuario</h1>
+				<h1>New User</h1>
 				<form className="FormCont_ModalNew" onSubmit={handleSubmit}>
 					<div>
 						<input
@@ -115,7 +118,7 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 							/>
 						</div>
 					</div>
-					<div>
+					<div className="Wrapper_OkKo_ModalNew">
 						<button className="Ok_ModalNew" type="submit">
 							<CheckCircleOutlineIcon fontSize="large" />
 						</button>

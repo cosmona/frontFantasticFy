@@ -4,6 +4,7 @@
 	max-width: 80vw;
 	min-width: 350px;
 	margin: 0 auto;
+	align-items: center;
 }
 
 .UserCard_ShowUsers {
@@ -16,17 +17,18 @@
 	flex-wrap: wrap;
 	flex-direction: column;
 	padding: 20px;
+	width: 93vw;
 }
 
 .Title_ShowUsers {
 	margin-top: 5px;
-	font-size: 22px;
+	font-size: 23px;
 	color: #05a0db;
 	text-align: left;
 }
 
 .Title_ShowUsers + div {
-	font-size: 18px;
+	font-size: 15px;
 	margin-top: 10px;
 	margin-left: 20px;
 	color: white;
@@ -38,6 +40,10 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
+	}
+
+	.Wrapper_ShowUsers {
+		padding: 10px;
 	}
 	.Title_ShowUsers {
 		margin-top: 5px;
