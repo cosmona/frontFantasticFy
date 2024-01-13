@@ -22,29 +22,8 @@ export const fetchGlobal = async (
 
 		const data = await res.json();
 		if (setUsers) setUsers(data.usuarios);
+		return res;
 	} catch (error: any) {
 		console.error(error.message);
 	}
 };
-
-/* export const fetchUsers = async (
-	setUsers: React.Dispatch<React.SetStateAction<UserData[]>>
-) => {
-	try {
-		const res = await fetch("http://localhost:3000/users/", {
-			method: "GET",
-			headers: {
-				"Content-Type": "application/json",
-			},
-		});
-
-		if (!res.ok) {
-			throw new Error("Error al obtener usuarios");
-		}
-
-		const data = await res.json();
-		setUsers(data.usuarios); // Aquí seteamos directamente el resultado al estado
-	} catch (error: any) {
-		console.error(error.message);
-	}
-}; */

@@ -36,47 +36,47 @@ const ShowUsers: React.FC<ShowUsersProps> = (prompt) => {
 					users.map((user: UserData) => {
 						return (
 							<div className="UserCard_ShowUsers">
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">Id</div>
 									<div>{user._id}</div>
 								</div>
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">
 										Username
 									</div>
 									<div>{user.username}</div>
 								</div>
 
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">Name</div>
 									<div>{user.name}</div>
 								</div>
 
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">Email</div>
 									<div>{user.email}</div>
 								</div>
 
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">
 										Street
 									</div>
 									<div>{user.address.street}</div>
 								</div>
 
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">City</div>
 									<div>{user.address.city}</div>
 								</div>
 
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">
 										Country
 									</div>
 									<div>{user.address.country}</div>
 								</div>
 
-								<div>
+								<div className="Wrapper_ShowUsers">
 									<div className="Title_ShowUsers">
 										External_id
 									</div>

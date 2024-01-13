@@ -14,6 +14,23 @@ export interface UserData {
 export interface ModalNewProps {
 	setUsers: React.Dispatch<React.SetStateAction<UserData[]>>;
 	setOpenModalNew: React.Dispatch<React.SetStateAction<boolean>>;
+	setOpenModalMsg: React.Dispatch<React.SetStateAction<boolean>>;
+	setTextModalMsg: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export interface ModalMsgProps {
+	setOpenModalMsg: React.Dispatch<React.SetStateAction<boolean>>;
+	textModalMsg: string;
+}
+
+export interface OptionsBarProps {
+	setUsers: React.Dispatch<React.SetStateAction<UserData[]>>;
+	setOpenModalNew: React.Dispatch<React.SetStateAction<boolean>>;
+	setOpenModalMsg: React.Dispatch<React.SetStateAction<boolean>>;
+	setTextModalMsg: React.Dispatch<React.SetStateAction<string>>;
+}
+export interface ModalMsgProps {
+	setOpenModalMsg: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export interface ShowUsersProps {

@@ -9,6 +9,14 @@
 	margin: 0px 10px;
 }
 
+.Button_OptionsBar_onClick {
+	font-size: 16px;
+	display: inline;
+	margin: 0px 10px;
+	transform: rotate(360deg);
+	transition: all 1s;
+}
+
 @media only screen and (min-width: 700px) {
 	.Container_OptionsBar {
 		display: flex;

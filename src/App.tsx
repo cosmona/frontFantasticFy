@@ -1,7 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 
 // Componentes, funciones e interfaces
-import { Cabecera, ModalNew, OptionsBar, ShowUsers } from "./components";
+import {
+	Cabecera,
+	ModalNew,
+	OptionsBar,
+	ShowUsers,
+	ModalMsg,
+} from "./components";
 import { fetchGlobal } from "./Helpers/helpers";
 import { UserData } from "./Helpers/interfaces";
 
@@ -10,6 +16,8 @@ import "./App.css";
 
 function App() {
 	const [openModalNew, setOpenModalNew] = useState<boolean>(false);
+	const [openModalMsg, setOpenModalMsg] = useState<boolean>(false);
+	const [textModalMsg, setTextModalMsg] = useState<string>("");
 	const [users, setUsers] = useState<UserData[]>([]);
 
 	useEffect(() => {
@@ -27,16 +35,26 @@ function App() {
 				<ModalNew
 					setUsers={setUsers}
 					setOpenModalNew={setOpenModalNew}
+					setOpenModalMsg={setOpenModalMsg}
+					setTextModalMsg={setTextModalMsg}
+				/>
+			)}
+			{openModalMsg && (
+				<ModalMsg
+					setOpenModalMsg={setOpenModalMsg}
+					textModalMsg={textModalMsg}
 				/>
 			)}
 			<div className="App">
 				<Cabecera />
 				<main>
 					<article className="Article_App">
-						<h1>Lista de Usuarios ({users && users.length})</h1>
+						<h1>Users ({users && users.length})</h1>
 						<OptionsBar
 							setUsers={setUsers}
 							setOpenModalNew={setOpenModalNew}
+							setOpenModalMsg={setOpenModalMsg}
+							setTextModalMsg={setTextModalMsg}
 						/>
 						<ShowUsers users={users} setUsers={setUsers} />
 					</article>
