@@ -9,7 +9,6 @@ import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 //Estilos
 import "./OptionsBar.css";
 import { useState } from "react";
-import { on } from "events";
 
 const OptionsBar: React.FC<OptionsBarProps> = (promps) => {
 	const { setTextModalMsg, setOpenModalNew, setOpenModalMsg, setUsers } =
