@@ -17,15 +17,11 @@ const OptionsBar: React.FC<OptionsBarProps> = (promps) => {
 
 	const fetchSync = async () => {
 		const res = await fetchGlobal(
-			"https://apifantasticfy.onrender.com/sync/",
+			"https://apifantasticfy.fly.dev/sync/",
 			"POST"
 		);
 
-		fetchGlobal(
-			"https://apifantasticfy.onrender.com/users/",
-			"GET",
-			setUsers
-		);
+		fetchGlobal("https://apifantasticfy.fly.dev/users/", "GET", setUsers);
 
 		setOnclick(true);
 		setTimeout(() => {

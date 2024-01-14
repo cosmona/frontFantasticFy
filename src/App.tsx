@@ -21,11 +21,7 @@ function App() {
 	const [users, setUsers] = useState<UserData[]>([]);
 
 	useEffect(() => {
-		fetchGlobal(
-			"https://apifantasticfy.onrender.com/users/",
-			"GET",
-			setUsers
-		);
+		fetchGlobal("https://apifantasticfy.fly.dev/users/", "GET", setUsers);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [users && users.length]);
 

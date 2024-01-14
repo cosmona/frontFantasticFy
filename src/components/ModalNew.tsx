@@ -33,7 +33,7 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		fetchGlobal(
-			"https://apifantasticfy.onrender.com/users/",
+			"https://apifantasticfy.fly.dev/users/",
 			"PUT",
 			setUsers,
 			formData
