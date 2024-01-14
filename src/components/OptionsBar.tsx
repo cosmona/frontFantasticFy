@@ -16,6 +16,8 @@ const OptionsBar: React.FC<OptionsBarProps> = (promps) => {
 	const [onClick, setOnclick] = useState(false);
 
 	const fetchSync = async () => {
+		setOnclick(true);
+
 		const res = await fetchGlobal(
 			"https://apifantasticfy.fly.dev/sync/",
 			"POST"
@@ -23,7 +25,6 @@ const OptionsBar: React.FC<OptionsBarProps> = (promps) => {
 
 		fetchGlobal("https://apifantasticfy.fly.dev/users/", "GET", setUsers);
 
-		setOnclick(true);
 		setTimeout(() => {
 			setOnclick(false);
 		}, 5000);
@@ -31,7 +32,7 @@ const OptionsBar: React.FC<OptionsBarProps> = (promps) => {
 		if (res && !res.ok) {
 			setTextModalMsg("Error");
 		} else {
-			setTextModalMsg("Registros actualizados");
+			setTextModalMsg("Users updated");
 		}
 		setOpenModalMsg(true);
 	};
