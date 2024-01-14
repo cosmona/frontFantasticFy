@@ -33,13 +33,13 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 	const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		fetchGlobal(
-			"https://apifantasticfy.onrender.com/users/",
+			"https://apifantasticfy.fly.dev/users/",
 			"PUT",
 			setUsers,
 			formData
 		);
 		setOpenModalNew(false);
-		setTextModalMsg("Registro añadido");
+		setTextModalMsg("Created user");
 		setOpenModalMsg(true);
 	};
 
@@ -59,6 +59,7 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 					<div>
 						<input
 							className="Input_ModalNew"
+							required
 							id="name"
 							name="name"
 							onChange={handleChange}
@@ -74,6 +75,7 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 							onChange={handleChange}
 							type="text"
 							placeholder="Username"
+							required
 						/>
 					</div>
 					<div>
@@ -84,6 +86,7 @@ const ModalNew: React.FC<ModalNewProps> = (prompt) => {
 							onChange={handleChange}
 							type="email"
 							placeholder="Email"
+							required
 						/>
 					</div>
 					<div>
